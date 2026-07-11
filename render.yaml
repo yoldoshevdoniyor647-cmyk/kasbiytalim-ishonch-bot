@@ -2,35 +2,40 @@ services:
   - type: worker
     name: kasbiy-talim-ishonch-bot
     runtime: python
-    plan: starter
-    region: frankfurt
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
     autoDeploy: true
-    disk:
-      name: kasbiy-talim-data
-      mountPath: /var/data
-      sizeGB: 1
+
     envVars:
       - key: BOT_TOKEN
         sync: false
+
       - key: ADMIN_ID
         value: "5392733969"
+
       - key: DATABASE
-        value: /var/data/database.db
+        value: database.db
+
       - key: MAX_UPLOAD_MB
         value: "20"
+
       - key: RATE_LIMIT_SECONDS
         value: "1.5"
+
       - key: CONTACT_PHONE
         sync: false
+
       - key: CONTACT_EMAIL
         sync: false
+
       - key: CONTACT_WEBSITE
         sync: false
+
       - key: CONTACT_ADDRESS
         sync: false
+
       - key: CONTACT_LATITUDE
         sync: false
+
       - key: CONTACT_LONGITUDE
         sync: false
