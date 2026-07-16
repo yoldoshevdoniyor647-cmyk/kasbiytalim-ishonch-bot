@@ -10,3 +10,6 @@ services:
         
       - key: BOT_TOKEN
         value: '8860601189:AAFpnru0P2eIk4D4_HXEqYo5jLeBT2UWR4Y'
+
+      - key: CONTACT_PHONE
+        value: "+998 91 304 00 09"
