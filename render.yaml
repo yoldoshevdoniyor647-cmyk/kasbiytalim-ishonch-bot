@@ -1,10 +1,11 @@
 services:
   - type: worker
     name: kasbiy-talim-ishonch-bot
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python bot.py
-    autoDeploy: true
+    env: python
+    # ... другие ваши настройки ...
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9  # или 3.12.x
 
     envVars:
       - key: BOT_TOKEN
