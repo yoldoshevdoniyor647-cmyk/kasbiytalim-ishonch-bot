@@ -3,7 +3,7 @@ services:
     name: kasbiy-talim-ishonch-bot
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "bot.py"
+    startCommand: "python bot.py"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
