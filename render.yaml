@@ -2,9 +2,9 @@ services:
   - type: worker
     name: kasbiy-talim-ishonch-bot
     env: python
-    # ... другие ваши настройки ...
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bot.py"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.9  # или 3.12.x
-
+        value: 3.11.9
    
