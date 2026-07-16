@@ -26,7 +26,7 @@ def _require(name: str) -> str:
 
 @dataclass(frozen=True)
 class ContactInfo:
-    phone: str = field(default_factory=lambda: os.getenv("CONTACT_PHONE", ""))
+    phone: str = field(default_factory=lambda: os.getenv("CONTACT_PHONE", "+998 91 304 00 09"))
     email: str = field(default_factory=lambda: os.getenv("CONTACT_EMAIL", ""))
     website: str = field(default_factory=lambda: os.getenv("CONTACT_WEBSITE", ""))
     address: str = field(default_factory=lambda: os.getenv("CONTACT_ADDRESS", ""))
